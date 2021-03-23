@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+{% block head %} 
+<title>Article Options</title>
+{% endblock head %} 
+ 
+{% block content %}
+    <div>
+        <!-- Links to the two articles --> 
+        <a href="https://en.wikipedia.org/?curid={{article_options.one.id}}" target="_blank"><button>{{article_options.one.title}}</button></a>
+        <a href="https://en.wikipedia.org/?curid={{article_options.two.id}}" target="_blank"><button>{{article_options.two.title}}</button></a>
+    </div>
+    <div id="optionFooter">
+        <!-- Option to refresh the page and get two new articles -->
+        <button id="refreshOptions" onClick="window.location.reload()">Hey...these Links Suck....Can I get two More?</button>
+    </div>
+{% endblock content %} 
+
